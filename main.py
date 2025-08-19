@@ -125,9 +125,9 @@ class ImageProcessor:
                 faces.extend(detected_faces)
 
         if len(faces) > 0:
-            return f"Обнаружен человек"
+            return f"РћР±РЅР°СЂСѓР¶РµРЅ С‡РµР»РѕРІРµРє"
         else:
-            return "Человек не обнаружен"
+            return "Р§РµР»РѕРІРµРє РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅ"
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -136,7 +136,7 @@ class MainWindow(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle('Программа для обработки изображений с помощью OpenCV')
+        self.setWindowTitle('РџСЂРѕРіСЂР°РјРјР° РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РёР·РѕР±СЂР°Р¶РµРЅРёР№ СЃ РїРѕРјРѕС‰СЊСЋ OpenCV')
         self.setGeometry(100, 100, 800, 600)
         self.setWindowIcon(QIcon('ico/ico.png'))
 
@@ -191,35 +191,35 @@ class MainWindow(QMainWindow):
                 """)
 
     def createActions(self):
-        self.open_act = QAction(QIcon('ico/open.png'), '&Открыть...', self, triggered=self.openImage, shortcut="Ctrl+O")
-        self.save_act = QAction(QIcon('ico/save.png'), '&Сохранить как...', self, triggered=self.saveImage,shortcut="Ctrl+S")
-        self.exit_act = QAction(QIcon('ico/exit.png'), '&Выход из программы', self, triggered=self.close, shortcut="Ctrl+Q")
-        self.grayscale_act = QAction('&Градация серого', self, triggered=self.applyGrayscale)
-        self.blur_act = QAction('&Размытие', self, triggered=self.applyBlur)
-        self.canny_act = QAction('&Детектор границ', self, triggered=self.applyCanny)
-        self.rotate_act = QAction('&Поворот', self, triggered=self.applyRotate)
-        self.resize_act = QAction('&Изменить размер', self, triggered=self.applyResize)
-        self.brightness_contrast_act = QAction('&Яркость/Контраст', self, triggered=self.applyBrightnessContrast)
-        self.text_act = QAction('&Добавить текст', self, triggered=self.addText)
-        self.draw_line_act = QAction('&Нарисовать линию', self, triggered=self.drawLine)
-        self.draw_circle_act = QAction('&Нарисовать круг', self, triggered=self.drawCircle)
-        self.rectangle_act = QAction('&Нарисовать прямоугольник', self, triggered=self.drawRectangle)
-        self.detect_face_act = QAction('&Распознать изображение', self, triggered=self.detectFace)
-        self.undo_act = QAction(QIcon('ico/undo.png'), 'Отменить', self, triggered=self.undoAction, shortcut="Ctrl+Z")
-        self.redo_act = QAction(QIcon('ico/redo.png'), 'Повторить', self, triggered=self.redoAction, shortcut="Ctrl+Y")
-        self.help_act = QAction(QIcon('ico/info.png'), '&Помощь', self, triggered=self.show_help)
-        self.about_act = QAction(QIcon('ico/proga.png'), '&О программе', self, triggered=self.show_about)
+        self.open_act = QAction(QIcon('ico/open.png'), '&РћС‚РєСЂС‹С‚СЊ...', self, triggered=self.openImage, shortcut="Ctrl+O")
+        self.save_act = QAction(QIcon('ico/save.png'), '&РЎРѕС…СЂР°РЅРёС‚СЊ РєР°Рє...', self, triggered=self.saveImage,shortcut="Ctrl+S")
+        self.exit_act = QAction(QIcon('ico/exit.png'), '&Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹', self, triggered=self.close, shortcut="Ctrl+Q")
+        self.grayscale_act = QAction('&Р“СЂР°РґР°С†РёСЏ СЃРµСЂРѕРіРѕ', self, triggered=self.applyGrayscale)
+        self.blur_act = QAction('&Р Р°Р·РјС‹С‚РёРµ', self, triggered=self.applyBlur)
+        self.canny_act = QAction('&Р”РµС‚РµРєС‚РѕСЂ РіСЂР°РЅРёС†', self, triggered=self.applyCanny)
+        self.rotate_act = QAction('&РџРѕРІРѕСЂРѕС‚', self, triggered=self.applyRotate)
+        self.resize_act = QAction('&РР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ', self, triggered=self.applyResize)
+        self.brightness_contrast_act = QAction('&РЇСЂРєРѕСЃС‚СЊ/РљРѕРЅС‚СЂР°СЃС‚', self, triggered=self.applyBrightnessContrast)
+        self.text_act = QAction('&Р”РѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚', self, triggered=self.addText)
+        self.draw_line_act = QAction('&РќР°СЂРёСЃРѕРІР°С‚СЊ Р»РёРЅРёСЋ', self, triggered=self.drawLine)
+        self.draw_circle_act = QAction('&РќР°СЂРёСЃРѕРІР°С‚СЊ РєСЂСѓРі', self, triggered=self.drawCircle)
+        self.rectangle_act = QAction('&РќР°СЂРёСЃРѕРІР°С‚СЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє', self, triggered=self.drawRectangle)
+        self.detect_face_act = QAction('&Р Р°СЃРїРѕР·РЅР°С‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ', self, triggered=self.detectFace)
+        self.undo_act = QAction(QIcon('ico/undo.png'), 'РћС‚РјРµРЅРёС‚СЊ', self, triggered=self.undoAction, shortcut="Ctrl+Z")
+        self.redo_act = QAction(QIcon('ico/redo.png'), 'РџРѕРІС‚РѕСЂРёС‚СЊ', self, triggered=self.redoAction, shortcut="Ctrl+Y")
+        self.help_act = QAction(QIcon('ico/info.png'), '&РџРѕРјРѕС‰СЊ', self, triggered=self.show_help)
+        self.about_act = QAction(QIcon('ico/proga.png'), '&Рћ РїСЂРѕРіСЂР°РјРјРµ', self, triggered=self.show_about)
 
     def createMenus(self):
-        self.file_menu = self.menuBar().addMenu('&Файл')
+        self.file_menu = self.menuBar().addMenu('&Р¤Р°Р№Р»')
         self.file_menu.addAction(self.open_act)
         self.file_menu.addAction(self.save_act)
         self.file_menu.addSeparator()
         self.file_menu.addAction(self.exit_act)
 
-        self.detect_menu = self.menuBar().addAction('&Распознать изображение', self.detectFace)
+        self.detect_menu = self.menuBar().addAction('&Р Р°СЃРїРѕР·РЅР°С‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ', self.detectFace)
 
-        self.edit_menu = self.menuBar().addMenu('&Инструменты')
+        self.edit_menu = self.menuBar().addMenu('&РРЅСЃС‚СЂСѓРјРµРЅС‚С‹')
         self.edit_menu.addAction(self.grayscale_act)
         self.edit_menu.addAction(self.blur_act)
         self.edit_menu.addAction(self.canny_act)
@@ -234,12 +234,12 @@ class MainWindow(QMainWindow):
         self.edit_menu.addAction(self.undo_act)
         self.edit_menu.addAction(self.redo_act)
 
-        self.help_menu = self.menuBar().addMenu('&Помощь')
+        self.help_menu = self.menuBar().addMenu('&РџРѕРјРѕС‰СЊ')
         self.help_menu.addAction(self.help_act)
         self.help_menu.addAction(self.about_act)
 
     def createToolBars(self):
-        toolbar = QToolBar('Доп инструменты', self)
+        toolbar = QToolBar('Р”РѕРї РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹', self)
         toolbar.setOrientation(Qt.Vertical)
 
         toolbar.addAction(self.undo_act)
@@ -267,44 +267,44 @@ class MainWindow(QMainWindow):
         context_menu.exec_(event.globalPos())
 
     def show_help(self):
-        QMessageBox.information(self, 'Помощь', 'Обращайтесь по почте: andrey.paydak@mail.ru')
+        QMessageBox.information(self, 'РџРѕРјРѕС‰СЊ', 'РћР±СЂР°С‰Р°Р№С‚РµСЃСЊ РїРѕ РїРѕС‡С‚Рµ: andrey.paydak@mail.ru')
 
     def show_about(self):
-        QMessageBox.information(self, 'О программе', 'Программа для обработки изображений\nВерсия 1.2')
+        QMessageBox.information(self, 'Рћ РїСЂРѕРіСЂР°РјРјРµ', 'РџСЂРѕРіСЂР°РјРјР° РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РёР·РѕР±СЂР°Р¶РµРЅРёР№\nР’РµСЂСЃРёСЏ 1.2')
 
     def detectFace(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
         result = self.processor.detect_face()
         self.statusBar.showMessage(result)
 
     def mouseMoveEvent(self, event: QMouseEvent):
         x, y = event.x(), event.y()
-        self.statusBar.showMessage(f'Координаты курсора: ({x}, {y})')
+        self.statusBar.showMessage(f'РљРѕРѕСЂРґРёРЅР°С‚С‹ РєСѓСЂСЃРѕСЂР°: ({x}, {y})')
 
     def openImage(self):
         file_dialog = QFileDialog(self)
-        file_dialog.setNameFilter("Изображения (*.png *.jpg *.jpeg *.bmp)")
+        file_dialog.setNameFilter("РР·РѕР±СЂР°Р¶РµРЅРёСЏ (*.png *.jpg *.jpeg *.bmp)")
         if file_dialog.exec_():
             file_path = file_dialog.selectedFiles()[0]
             if not self.processor.load_image(file_path):
-                QMessageBox.warning(self, "Ошибка", "Не удалось загрузить изображение. Проверьте путь к файлу и его целостность.")
+                QMessageBox.warning(self, "РћС€РёР±РєР°", "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ. РџСЂРѕРІРµСЂСЊС‚Рµ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ Рё РµРіРѕ С†РµР»РѕСЃС‚РЅРѕСЃС‚СЊ.")
             else:
                 self.displayImage(self.processor.image)
-                self.statusBar.showMessage(f'Изображение загружено: {file_path}')
+                self.statusBar.showMessage(f'РР·РѕР±СЂР°Р¶РµРЅРёРµ Р·Р°РіСЂСѓР¶РµРЅРѕ: {file_path}')
 
     def saveImage(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р»")
             return
         file_dialog = QFileDialog(self)
         file_dialog.setAcceptMode(QFileDialog.AcceptSave)
-        file_dialog.setNameFilter("Изображения (*.png *.jpg *.jpeg *.bmp)")
+        file_dialog.setNameFilter("РР·РѕР±СЂР°Р¶РµРЅРёСЏ (*.png *.jpg *.jpeg *.bmp)")
         if file_dialog.exec_():
             file_path = file_dialog.selectedFiles()[0]
             self.processor.save_image(file_path)
-            self.statusBar.showMessage(f'Изображение сохранено: {file_path}')
+            self.statusBar.showMessage(f'РР·РѕР±СЂР°Р¶РµРЅРёРµ СЃРѕС…СЂР°РЅРµРЅРѕ: {file_path}')
 
     def displayImage(self, image):
         qformat = QImage.Format_Indexed8
@@ -326,57 +326,56 @@ class MainWindow(QMainWindow):
 
     def applyGrayscale(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
         image = self.processor.apply_grayscale()
         self.displayImage(image)
-        self.statusBar.showMessage(f'Градация серого применена')
+        self.statusBar.showMessage(f'Р“СЂР°РґР°С†РёСЏ СЃРµСЂРѕРіРѕ РїСЂРёРјРµРЅРµРЅР°')
 
     def applyBlur(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
-        kernel_size, ok = QInputDialog.getInt(self, 'Размытие', 'Размер ядра (нечётное число):', min=1, max=49, step=2)
+        kernel_size, ok = QInputDialog.getInt(self, 'Р Р°Р·РјС‹С‚РёРµ', 'Р Р°Р·РјРµСЂ СЏРґСЂР° (РЅРµС‡С‘С‚РЅРѕРµ С‡РёСЃР»Рѕ):', min=1, max=49, step=2)
         if ok:
             self.displayImage(self.processor.apply_blur(kernel_size))
-            self.statusBar.showMessage(f'Размытие применено с размером ядра {kernel_size}')
+            self.statusBar.showMessage(f'Р Р°Р·РјС‹С‚РёРµ РїСЂРёРјРµРЅРµРЅРѕ СЃ СЂР°Р·РјРµСЂРѕРј СЏРґСЂР° {kernel_size}')
 
     def applyCanny(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
-        threshold1, ok1 = QInputDialog.getInt(self, 'Детектор границ', 'Порог 1:', min=0, max=255)
-        threshold2, ok2 = QInputDialog.getInt(self, 'Детектор границ', 'Порог 2:', min=0, max=255)
+        threshold1, ok1 = QInputDialog.getInt(self, 'Р”РµС‚РµРєС‚РѕСЂ РіСЂР°РЅРёС†', 'РџРѕСЂРѕРі 1:', min=0, max=255)
+        threshold2, ok2 = QInputDialog.getInt(self, 'Р”РµС‚РµРєС‚РѕСЂ РіСЂР°РЅРёС†', 'РџРѕСЂРѕРі 2:', min=0, max=255)
         if ok1 and ok2:
             self.displayImage(self.processor.apply_canny(threshold1, threshold2))
-            self.statusBar.showMessage(f'Применён детектор с порогами {threshold1} и {threshold2}')
+            self.statusBar.showMessage(f'РџСЂРёРјРµРЅС‘РЅ РґРµС‚РµРєС‚РѕСЂ СЃ РїРѕСЂРѕРіР°РјРё {threshold1} Рё {threshold2}')
 
     def applyRotate(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
-        angle, ok = QInputDialog.getInt(self, 'Поворот', 'Угол поворота:', min=-360, max=360)
+        angle, ok = QInputDialog.getInt(self, 'РџРѕРІРѕСЂРѕС‚', 'РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р°:', min=-360, max=360)
         if ok:
             self.displayImage(self.processor.rotate_image(angle))
-            self.statusBar.showMessage(f'Изображение повернуто на {angle} градусов')
+            self.statusBar.showMessage(f'РР·РѕР±СЂР°Р¶РµРЅРёРµ РїРѕРІРµСЂРЅСѓС‚Рѕ РЅР° {angle} РіСЂР°РґСѓСЃРѕРІ')
 
     def applyResize(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
-        width, ok1 = QInputDialog.getInt(self, 'Изменить размер', 'Ширина:', min=1)
-        height, ok2 = QInputDialog.getInt(self, 'Изменить размер', 'Высота:', min=1)
+        width, ok1 = QInputDialog.getInt(self, 'РР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ', 'РЁРёСЂРёРЅР°:', min=1)
+        height, ok2 = QInputDialog.getInt(self, 'РР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ', 'Р’С‹СЃРѕС‚Р°:', min=1)
         if ok1 and ok2:
             self.displayImage(self.processor.resize_image(width, height))
-            self.statusBar.showMessage(f'Размер изображения изменён на {width}x{height}')
-
+            self.statusBar.showMessage(f'Р Р°Р·РјРµСЂ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ РёР·РјРµРЅС‘РЅ РЅР° {width}x{height}')
 
     def applyBrightnessContrast(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
         dialog = QDialog(self)
-        dialog.setWindowTitle('Яркость/контраст')
+        dialog.setWindowTitle('РЇСЂРєРѕСЃС‚СЊ/РєРѕРЅС‚СЂР°СЃС‚')
         layout = QVBoxLayout()
 
         form_layout = QFormLayout()
@@ -384,10 +383,10 @@ class MainWindow(QMainWindow):
         brightness.setRange(-255, 255)
         contrast = QSlider(Qt.Horizontal)
         contrast.setRange(-127, 127)
-        form_layout.addRow('Яркость:', brightness)
-        form_layout.addRow('Контраст:', contrast)
+        form_layout.addRow('РЇСЂРєРѕСЃС‚СЊ:', brightness)
+        form_layout.addRow('РљРѕРЅС‚СЂР°СЃС‚:', contrast)
 
-        apply_button = QPushButton("Применить")
+        apply_button = QPushButton("РџСЂРёРјРµРЅРёС‚СЊ")
         apply_button.clicked.connect(dialog.accept)
 
         layout.addLayout(form_layout)
@@ -397,11 +396,11 @@ class MainWindow(QMainWindow):
         if dialog.exec_() == QDialog.Accepted:
             image = self.processor.change_brightness_contrast(brightness.value(), contrast.value())
             self.displayImage(image)
-            self.statusBar.showMessage(f'Яркость изменена на {brightness}, контраст на {contrast}')
+            self.statusBar.showMessage(f'РЇСЂРєРѕСЃС‚СЊ РёР·РјРµРЅРµРЅР° РЅР° {brightness}, РєРѕРЅС‚СЂР°СЃС‚ РЅР° {contrast}')
 
     def choose_color(self, button):
         color_dialog = QColorDialog(self)
-        color_dialog.setWindowTitle("Выбор цвета")
+        color_dialog.setWindowTitle("Р’С‹Р±РѕСЂ С†РІРµС‚Р°")
         if color_dialog.exec_() == QColorDialog.Accepted:
             color = color_dialog.selectedColor()
             r, g, b, _ = color.getRgb()
@@ -411,11 +410,11 @@ class MainWindow(QMainWindow):
 
     def addText(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
 
         dialog = QDialog(self)
-        dialog.setWindowTitle('Добавить текст')
+        dialog.setWindowTitle('Р”РѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚')
         layout = QVBoxLayout()
 
         form_layout = QFormLayout()
@@ -426,17 +425,17 @@ class MainWindow(QMainWindow):
         y.setRange(0, self.processor.image.shape[0])
         font_scale = QSpinBox()
         font_scale.setRange(1, 10)
-        color_button = QPushButton("Цвет")
+        color_button = QPushButton("Р¦РІРµС‚")
 
         color_button.clicked.connect(lambda: self.choose_color(color_button))
 
-        form_layout.addRow('Текст:', text_input)
+        form_layout.addRow('РўРµРєСЃС‚:', text_input)
         form_layout.addRow('X:', x)
         form_layout.addRow('Y:', y)
-        form_layout.addRow('Размер шрифта:', font_scale)
-        form_layout.addRow('Цвет:', color_button)
+        form_layout.addRow('Р Р°Р·РјРµСЂ С€СЂРёС„С‚Р°:', font_scale)
+        form_layout.addRow('Р¦РІРµС‚:', color_button)
 
-        apply_button = QPushButton("Применить")
+        apply_button = QPushButton("РџСЂРёРјРµРЅРёС‚СЊ")
         apply_button.clicked.connect(dialog.accept)
 
         layout.addLayout(form_layout)
@@ -449,15 +448,15 @@ class MainWindow(QMainWindow):
             bgr_color = (color[2], color[1], color[0])
             image = self.processor.draw_text(text, x.value(), y.value(), font_scale.value(), bgr_color)
             self.displayImage(image)
-            self.statusBar.showMessage(f'Текст "{text}" добавлен с масштабом шрифта {font_scale.value()}')
+            self.statusBar.showMessage(f'РўРµРєСЃС‚ "{text}" РґРѕР±Р°РІР»РµРЅ СЃ РјР°СЃС€С‚Р°Р±РѕРј С€СЂРёС„С‚Р° {font_scale.value()}')
 
     def drawLine(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
 
         dialog = QDialog(self)
-        dialog.setWindowTitle('Нарисовать линию')
+        dialog.setWindowTitle('РќР°СЂРёСЃРѕРІР°С‚СЊ Р»РёРЅРёСЋ')
         layout = QVBoxLayout()
 
         form_layout = QFormLayout()
@@ -469,7 +468,7 @@ class MainWindow(QMainWindow):
         x2.setRange(0, self.processor.image.shape[1])
         y2 = QSpinBox()
         y2.setRange(0, self.processor.image.shape[0])
-        color_button = QPushButton("Цвет")
+        color_button = QPushButton("Р¦РІРµС‚")
 
         color_button.clicked.connect(lambda: self.choose_color(color_button))
 
@@ -477,9 +476,9 @@ class MainWindow(QMainWindow):
         form_layout.addRow('Y1:', y1)
         form_layout.addRow('X2:', x2)
         form_layout.addRow('Y2:', y2)
-        form_layout.addRow('Цвет:', color_button)
+        form_layout.addRow('Р¦РІРµС‚:', color_button)
 
-        apply_button = QPushButton("Применить")
+        apply_button = QPushButton("РџСЂРёРјРµРЅРёС‚СЊ")
         apply_button.clicked.connect(dialog.accept)
 
         layout.addLayout(form_layout)
@@ -491,15 +490,15 @@ class MainWindow(QMainWindow):
             bgr_color = (color[2], color[1], color[0])
             image = self.processor.draw_line(x1.value(), y1.value(), x2.value(), y2.value(), bgr_color)
             self.displayImage(image)
-            self.statusBar.showMessage('Линия нарисована')
+            self.statusBar.showMessage('Р›РёРЅРёСЏ РЅР°СЂРёСЃРѕРІР°РЅР°')
 
     def drawCircle(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
 
         dialog = QDialog(self)
-        dialog.setWindowTitle('Нарисовать круг')
+        dialog.setWindowTitle('РќР°СЂРёСЃРѕРІР°С‚СЊ РєСЂСѓРі')
         layout = QVBoxLayout()
 
         form_layout = QFormLayout()
@@ -509,16 +508,16 @@ class MainWindow(QMainWindow):
         center_y.setRange(0, self.processor.image.shape[0])
         radius = QSpinBox()
         radius.setRange(1, 100)
-        color_button = QPushButton("Цвет")
+        color_button = QPushButton("Р¦РІРµС‚")
 
         color_button.clicked.connect(lambda: self.choose_color(color_button))
 
-        form_layout.addRow('Центр X:', center_x)
-        form_layout.addRow('Центр Y:', center_y)
-        form_layout.addRow('Радиус:', radius)
-        form_layout.addRow('Цвет:', color_button)
+        form_layout.addRow('Р¦РµРЅС‚СЂ X:', center_x)
+        form_layout.addRow('Р¦РµРЅС‚СЂ Y:', center_y)
+        form_layout.addRow('Р Р°РґРёСѓСЃ:', radius)
+        form_layout.addRow('Р¦РІРµС‚:', color_button)
 
-        apply_button = QPushButton("Применить")
+        apply_button = QPushButton("РџСЂРёРјРµРЅРёС‚СЊ")
         apply_button.clicked.connect(dialog.accept)
 
         layout.addLayout(form_layout)
@@ -530,15 +529,15 @@ class MainWindow(QMainWindow):
             bgr_color = (color[2], color[1], color[0])
             image = self.processor.draw_circle(center_x.value(), center_y.value(), radius.value(), bgr_color)
             self.displayImage(image)
-            self.statusBar.showMessage('Круг нарисован')
+            self.statusBar.showMessage('РљСЂСѓРі РЅР°СЂРёСЃРѕРІР°РЅ')
 
     def drawRectangle(self):
         if self.processor.image is None:
-            QMessageBox.warning(self, "Предупреждение", "Необходимо загрузить файл, после чего начать редактирование")
+            QMessageBox.warning(self, "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ", "РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р», РїРѕСЃР»Рµ С‡РµРіРѕ РЅР°С‡Р°С‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ")
             return
 
         dialog = QDialog(self)
-        dialog.setWindowTitle('Нарисовать прямоугольник')
+        dialog.setWindowTitle('РќР°СЂРёСЃРѕРІР°С‚СЊ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє')
         layout = QVBoxLayout()
 
         form_layout = QFormLayout()
@@ -550,17 +549,17 @@ class MainWindow(QMainWindow):
         w.setRange(1, self.processor.image.shape[1])
         h = QSpinBox()
         h.setRange(1, self.processor.image.shape[0])
-        color_button = QPushButton("Цвет")
+        color_button = QPushButton("Р¦РІРµС‚")
 
         color_button.clicked.connect(lambda: self.choose_color(color_button))
 
         form_layout.addRow('X:', x)
         form_layout.addRow('Y:', y)
-        form_layout.addRow('Ширина:', w)
-        form_layout.addRow('Высота:', h)
-        form_layout.addRow('Цвет:', color_button)
+        form_layout.addRow('РЁРёСЂРёРЅР°:', w)
+        form_layout.addRow('Р’С‹СЃРѕС‚Р°:', h)
+        form_layout.addRow('Р¦РІРµС‚:', color_button)
 
-        apply_button = QPushButton("Применить")
+        apply_button = QPushButton("РџСЂРёРјРµРЅРёС‚СЊ")
         apply_button.clicked.connect(dialog.accept)
 
         layout.addLayout(form_layout)
@@ -572,22 +571,22 @@ class MainWindow(QMainWindow):
             bgr_color = (color[2], color[1], color[0])
             image = self.processor.draw_rectangle(x.value(), y.value(), w.value(), h.value(), bgr_color)
             self.displayImage(image)
-            self.statusBar.showMessage(f'Прямоугольник нарисован с шириной {w.value()} и высотой {h.value()}')
+            self.statusBar.showMessage(f'РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє РЅР°СЂРёСЃРѕРІР°РЅ СЃ С€РёСЂРёРЅРѕР№ {w.value()} Рё РІС‹СЃРѕС‚РѕР№ {h.value()}')
 
     def undoAction(self):
         image = self.processor.undo()
         if image is not None:
             self.displayImage(image)
-            self.statusBar.showMessage('Отмена последнего действия')
+            self.statusBar.showMessage('РћС‚РјРµРЅР° РїРѕСЃР»РµРґРЅРµРіРѕ РґРµР№СЃС‚РІРёСЏ')
 
     def redoAction(self):
         image = self.processor.redo()
         if image is not None:
             self.displayImage(image)
-            self.statusBar.showMessage('Повтор последнего действия')
+            self.statusBar.showMessage('РџРѕРІС‚РѕСЂ РїРѕСЃР»РµРґРЅРµРіРѕ РґРµР№СЃС‚РІРёСЏ')
 
     def closeEvent(self, event):
-        reply = QMessageBox.question(self, 'Предупреждение', 'Вы уверены, что хотите закрыть приложение?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        reply = QMessageBox.question(self, 'РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ', 'Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ Р·Р°РєСЂС‹С‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:
             event.accept()
